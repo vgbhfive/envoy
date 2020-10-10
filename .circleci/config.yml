@@ -52,7 +52,3 @@ workflows:
       - api
       - go_control_plane_mirror
       - filter_example_mirror
-      - docs:
-          filters:
-            tags:
-              only: /^v.*/
