@@ -21,7 +21,7 @@ Client TLS authentication
 config.filter.network.client_ssl_auth.v2.ClientSSLAuth
 ------------------------------------------------------
 
-`[config.filter.network.client_ssl_auth.v2.ClientSSLAuth proto] <https://github.com/envoyproxy/envoy/blob/ecacb2a36ec223a5822f73f28d20ac7f553e7528/api/envoy/config/filter/network/client_ssl_auth/v2/client_ssl_auth.proto#L24>`_
+`[config.filter.network.client_ssl_auth.v2.ClientSSLAuth proto] <https://github.com/envoyproxy/envoy/blob/55ad60fcf9f3878cb68fbc08159b82bc0f8f7773/api/envoy/config/filter/network/client_ssl_auth/v2/client_ssl_auth.proto#L24>`_
 
 
 .. code-block:: json
