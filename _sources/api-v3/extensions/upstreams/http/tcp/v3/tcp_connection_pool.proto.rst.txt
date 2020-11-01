@@ -9,7 +9,7 @@ Tcp Connection Pool
 extensions.upstreams.http.tcp.v3.TcpConnectionPoolProto
 -------------------------------------------------------
 
-`[extensions.upstreams.http.tcp.v3.TcpConnectionPoolProto proto] <https://github.com/envoyproxy/envoy/blob/65357503906172eecee4412bff26725947b281bd/api/envoy/extensions/upstreams/http/tcp/v3/tcp_connection_pool.proto#L15>`_
+`[extensions.upstreams.http.tcp.v3.TcpConnectionPoolProto proto] <https://github.com/envoyproxy/envoy/blob/675af949516ad241cfcb7288c6b1f1c3b03741af/api/envoy/extensions/upstreams/http/tcp/v3/tcp_connection_pool.proto#L15>`_
 
 A connection pool which forwards downstream HTTP as TCP to upstream,
 

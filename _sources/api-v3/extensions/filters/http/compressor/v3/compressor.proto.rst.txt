@@ -20,7 +20,7 @@ Compressor :ref:`configuration overview <config_http_filters_compressor>`.
 extensions.filters.http.compressor.v3.Compressor
 ------------------------------------------------
 
-`[extensions.filters.http.compressor.v3.Compressor proto] <https://github.com/envoyproxy/envoy/blob/65357503906172eecee4412bff26725947b281bd/api/envoy/extensions/filters/http/compressor/v3/compressor.proto#L24>`_
+`[extensions.filters.http.compressor.v3.Compressor proto] <https://github.com/envoyproxy/envoy/blob/675af949516ad241cfcb7288c6b1f1c3b03741af/api/envoy/extensions/filters/http/compressor/v3/compressor.proto#L24>`_
 
 
 .. code-block:: json
