@@ -9,7 +9,7 @@ Allow listed routes internal redirect predicate
 extensions.internal_redirect.allow_listed_routes.v3.AllowListedRoutesConfig
 ---------------------------------------------------------------------------
 
-`[extensions.internal_redirect.allow_listed_routes.v3.AllowListedRoutesConfig proto] <https://github.com/envoyproxy/envoy/blob/4d3090520dcde266b2c98bcce2cb222dda3c7436/api/envoy/extensions/internal_redirect/allow_listed_routes/v3/allow_listed_routes_config.proto#L17>`_
+`[extensions.internal_redirect.allow_listed_routes.v3.AllowListedRoutesConfig proto] <https://github.com/envoyproxy/envoy/blob/65357503906172eecee4412bff26725947b281bd/api/envoy/extensions/internal_redirect/allow_listed_routes/v3/allow_listed_routes_config.proto#L17>`_
 
 An internal redirect predicate that accepts only explicitly allowed target routes.
 
