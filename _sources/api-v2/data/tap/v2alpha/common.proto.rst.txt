@@ -9,7 +9,7 @@ Tap common data
 data.tap.v2alpha.Body
 ---------------------
 
-`[data.tap.v2alpha.Body proto] <https://github.com/envoyproxy/envoy/blob/d1c0b26a416b1fe74cb6e62de72df555e42dda3b/api/envoy/data/tap/v2alpha/common.proto#L15>`_
+`[data.tap.v2alpha.Body proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/data/tap/v2alpha/common.proto#L15>`_
 
 Wrapper for tapped body data. This includes HTTP request/response body, transport socket received
 and transmitted data, etc.

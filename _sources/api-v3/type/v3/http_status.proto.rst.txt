@@ -9,7 +9,7 @@ HTTP status codes
 type.v3.HttpStatus
 ------------------
 
-`[type.v3.HttpStatus proto] <https://github.com/envoyproxy/envoy/blob/d1c0b26a416b1fe74cb6e62de72df555e42dda3b/api/envoy/type/v3/http_status.proto#L136>`_
+`[type.v3.HttpStatus proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/v3/http_status.proto#L136>`_
 
 HTTP status.
 
@@ -31,7 +31,7 @@ code
 Enum type.v3.StatusCode
 -----------------------
 
-`[type.v3.StatusCode proto] <https://github.com/envoyproxy/envoy/blob/d1c0b26a416b1fe74cb6e62de72df555e42dda3b/api/envoy/type/v3/http_status.proto#L17>`_
+`[type.v3.StatusCode proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/v3/http_status.proto#L17>`_
 
 HTTP response codes supported in Envoy.
 For more details: https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml

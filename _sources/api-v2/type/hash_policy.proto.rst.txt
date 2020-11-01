@@ -9,7 +9,7 @@ Hash Policy
 type.HashPolicy
 ---------------
 
-`[type.HashPolicy proto] <https://github.com/envoyproxy/envoy/blob/d1c0b26a416b1fe74cb6e62de72df555e42dda3b/api/envoy/type/hash_policy.proto#L15>`_
+`[type.HashPolicy proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/hash_policy.proto#L15>`_
 
 Specifies the hash policy
 
@@ -30,7 +30,7 @@ source_ip
 type.HashPolicy.SourceIp
 ------------------------
 
-`[type.HashPolicy.SourceIp proto] <https://github.com/envoyproxy/envoy/blob/d1c0b26a416b1fe74cb6e62de72df555e42dda3b/api/envoy/type/hash_policy.proto#L18>`_
+`[type.HashPolicy.SourceIp proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/hash_policy.proto#L18>`_
 
 The source IP will be used to compute the hash used by hash-based load balancing
 algorithms.
