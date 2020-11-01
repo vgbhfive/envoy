@@ -9,7 +9,7 @@ HTTP
 Enum type.v3.CodecClientType
 ----------------------------
 
-`[type.v3.CodecClientType proto] <https://github.com/envoyproxy/envoy/blob/675af949516ad241cfcb7288c6b1f1c3b03741af/api/envoy/type/v3/http.proto#L13>`_
+`[type.v3.CodecClientType proto] <https://github.com/envoyproxy/envoy/blob/11382e388dfc4b69d9822b61290b44dbe07723cd/api/envoy/type/v3/http.proto#L13>`_
 
 
 .. _envoy_v3_api_enum_value_type.v3.CodecClientType.HTTP1:
