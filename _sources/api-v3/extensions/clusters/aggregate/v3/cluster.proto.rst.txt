@@ -9,7 +9,7 @@ Aggregate cluster configuration
 extensions.clusters.aggregate.v3.ClusterConfig
 ----------------------------------------------
 
-`[extensions.clusters.aggregate.v3.ClusterConfig proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/extensions/clusters/aggregate/v3/cluster.proto#L18>`_
+`[extensions.clusters.aggregate.v3.ClusterConfig proto] <https://github.com/envoyproxy/envoy/blob/4d3090520dcde266b2c98bcce2cb222dda3c7436/api/envoy/extensions/clusters/aggregate/v3/cluster.proto#L18>`_
 
 Configuration for the aggregate cluster. See the :ref:`architecture overview
 <arch_overview_aggregate_cluster>` for more information.

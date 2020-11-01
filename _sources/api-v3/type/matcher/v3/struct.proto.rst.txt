@@ -9,7 +9,7 @@ Struct matcher
 type.matcher.v3.StructMatcher
 -----------------------------
 
-`[type.matcher.v3.StructMatcher proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/matcher/v3/struct.proto#L68>`_
+`[type.matcher.v3.StructMatcher proto] <https://github.com/envoyproxy/envoy/blob/4d3090520dcde266b2c98bcce2cb222dda3c7436/api/envoy/type/matcher/v3/struct.proto#L68>`_
 
 StructMatcher provides a general interface to check if a given value is matched in
 google.protobuf.Struct. It uses `path` to retrieve the value
@@ -87,7 +87,7 @@ value
 type.matcher.v3.StructMatcher.PathSegment
 -----------------------------------------
 
-`[type.matcher.v3.StructMatcher.PathSegment proto] <https://github.com/envoyproxy/envoy/blob/92523763b81f85a11632f2509501efd494856aa0/api/envoy/type/matcher/v3/struct.proto#L72>`_
+`[type.matcher.v3.StructMatcher.PathSegment proto] <https://github.com/envoyproxy/envoy/blob/4d3090520dcde266b2c98bcce2cb222dda3c7436/api/envoy/type/matcher/v3/struct.proto#L72>`_
 
 Specifies the segment in a path to retrieve value from Struct.
 
