@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; envoy 1.16.0-65e809 documentation</title>
+  <title>开始 &mdash; envoy 1.16.0-51f13a documentation</title>
   
 
   
@@ -74,7 +74,7 @@
             
             
               <div class="version">
-                1.16.0-65e809
+                1.16.0-51f13a
               </div>
             
           
@@ -102,8 +102,8 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../about_docs.html">About the documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/intro.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start-to-run-simple-example">Quick Start to Run Simple Example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">开始</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">快速开始运行简单样例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#simple-configuration">Simple Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-the-envoy-docker-image">Using the Envoy Docker Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sandboxes">Sandboxes</a><ul>
@@ -178,7 +178,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Getting Started</li>
+      <li>开始</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,24 +197,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="getting-started">
-<span id="start"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="start">
+<span id="id1"></span><h1>开始<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h1>
 <p>This section gets you started with a very simple configuration and provides some example configurations.</p>
 <p>The fastest way to get started using Envoy is <a class="reference internal" href="../install/building.html#install-binaries"><span class="std std-ref">installing pre-built binaries</span></a>.
 You can also <a class="reference internal" href="../install/building.html#building"><span class="std std-ref">build it</span></a> from source.</p>
 <p>These examples use the <a class="reference internal" href="../api-v2/api.html#envoy-api-reference"><span class="std std-ref">v3 Envoy API</span></a>, but use only the static configuration
 feature of the API, which is most useful for simple requirements. For more complex requirements
 <a class="reference internal" href="../intro/arch_overview/operations/dynamic_configuration.html#arch-overview-dynamic-config"><span class="std std-ref">Dynamic Configuration</span></a> is supported.</p>
-<div class="section" id="quick-start-to-run-simple-example">
-<h2>Quick Start to Run Simple Example<a class="headerlink" href="#quick-start-to-run-simple-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>快速开始运行简单样例<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>These instructions run from files in the Envoy repo. The sections below give a
 more detailed explanation of the configuration file and execution steps for
 the same configuration.</p>
 <p>A very minimal Envoy configuration that can be used to validate basic plain HTTP
-proxying is available in <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/65e809118e3d10aea8540d6bcd1557e39a71f48d/configs/google_com_proxy.v2.yaml">configs/google_com_proxy.v2.yaml</a>. This is not
+proxying is available in <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/51f13a38e5ebec61f5bb6c8fd4c414a966707184/configs/google_com_proxy.v2.yaml">configs/google_com_proxy.v2.yaml</a>. This is not
 intended to represent a realistic Envoy deployment:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker pull envoyproxy/envoy-dev:65e809118e3d10aea8540d6bcd1557e39a71f48d
-$ docker run --rm -d -p 10000:10000 envoyproxy/envoy-dev:65e809118e3d10aea8540d6bcd1557e39a71f48d
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker pull envoyproxy/envoy-dev:51f13a38e5ebec61f5bb6c8fd4c414a966707184
+$ docker run --rm -d -p 10000:10000 envoyproxy/envoy-dev:51f13a38e5ebec61f5bb6c8fd4c414a966707184
 $ curl -v localhost:10000
 </pre></div>
 </div>
@@ -294,7 +294,7 @@ The <a class="reference internal" href="../configuration/overview/overview.html#
 <h2>Using the Envoy Docker Image<a class="headerlink" href="#using-the-envoy-docker-image" title="Permalink to this headline">¶</a></h2>
 <p>Create a simple Dockerfile to execute Envoy, which assumes that envoy.yaml (described above) is in your local directory.
 You can refer to the <a class="reference internal" href="../operations/cli.html#operations-cli"><span class="std std-ref">Command line options</span></a>.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FROM envoyproxy/envoy-dev:65e809118e3d10aea8540d6bcd1557e39a71f48d
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>FROM envoyproxy/envoy-dev:51f13a38e5ebec61f5bb6c8fd4c414a966707184
 COPY envoy.yaml /etc/envoy/envoy.yaml
 </pre></div>
 </div>
