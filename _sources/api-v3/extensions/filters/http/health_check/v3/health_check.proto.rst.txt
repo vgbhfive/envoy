@@ -20,7 +20,7 @@ Health check :ref:`configuration overview <config_http_filters_health_check>`.
 extensions.filters.http.health_check.v3.HealthCheck
 ---------------------------------------------------
 
-`[extensions.filters.http.health_check.v3.HealthCheck proto] <https://github.com/envoyproxy/envoy/blob/50aa9e133939e8fe0df967b15f7cb496241e9114/api/envoy/extensions/filters/http/health_check/v3/health_check.proto#L24>`_
+`[extensions.filters.http.health_check.v3.HealthCheck proto] <https://github.com/envoyproxy/envoy/blob/13bd2d9fdaa80bb60bdf9e506bd174eff7cdd21f/api/envoy/extensions/filters/http/health_check/v3/health_check.proto#L24>`_
 
 
 .. code-block:: json
