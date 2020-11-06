@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.16.0 (October 8, 2020) &mdash; envoy 1.16.0-b63bfa documentation</title>
+  <title>1.16.0 (October 8, 2020) &mdash; envoy 1.16.0-2d161e documentation</title>
   
 
   
@@ -74,7 +74,7 @@
             
             
               <div class="version">
-                1.16.0-b63bfa
+                1.16.0-2d161e
               </div>
             
           
@@ -100,7 +100,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about_docs.html">About the documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_docs.html">关于文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../start/start.html">开始</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install/install.html">Building and installation</a></li>
@@ -234,7 +234,7 @@
 <h2>Incompatible Behavior Changes<a class="headerlink" href="#incompatible-behavior-changes" title="Permalink to this headline">¶</a></h2>
 <p><em>Changes that are expected to cause an incompatibility if applicable; deployment changes are likely required</em></p>
 <ul class="simple">
-<li><p>build: added visibility rules for upstream. If these cause visibility related breakage, see notes in <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/b63bfabc9921cb7ee10e70d9de5c116538aeae40/BUILD">BUILD</a>.</p></li>
+<li><p>build: added visibility rules for upstream. If these cause visibility related breakage, see notes in <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/2d161e665238d4b417286839a0225d5bc955c207/BUILD">BUILD</a>.</p></li>
 <li><p>build: tcmalloc changes require Clang 9. This requirement change can be avoided by building with <cite>–define tcmalloc=gperftools</cite> to use the older tcmalloc code.</p></li>
 <li><p>config: additional warnings have been added for the use of v2 APIs. These appear as log messages
 and are also captured in the <a class="reference internal" href="../configuration/operations/runtime.html#runtime-stats"><span class="std std-ref">deprecated_feature_use</span></a> counter after server

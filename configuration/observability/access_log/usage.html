@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Access logging &mdash; envoy 1.16.0-b63bfa documentation</title>
+  <title>Access logging &mdash; envoy 1.16.0-2d161e documentation</title>
   
 
   
@@ -74,7 +74,7 @@
             
             
               <div class="version">
-                1.16.0-b63bfa
+                1.16.0-2d161e
               </div>
             
           
@@ -100,7 +100,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../about_docs.html">About the documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about_docs.html">关于文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../intro/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../start/start.html">开始</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../install/install.html">Building and installation</a></li>
@@ -571,7 +571,7 @@ none of the headers are present ‘-‘ symbol will be in the log.</p>
 where NAMESPACE is the filter namespace used when setting the metadata, KEY is an optional
 lookup up key in the namespace with the option of specifying nested keys separated by ‘:’,
 and Z is an optional parameter denoting string truncation up to Z characters long. Dynamic Metadata
-can be set by filters using the <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/b63bfabc9921cb7ee10e70d9de5c116538aeae40/include/envoy/stream_info/stream_info.h">StreamInfo</a> API:
+can be set by filters using the <a class="reference external" href="https://github.com/envoyproxy/envoy/blob/2d161e665238d4b417286839a0225d5bc955c207/include/envoy/stream_info/stream_info.h">StreamInfo</a> API:
 <em>setDynamicMetadata</em>. The data will be logged as a JSON string. For example, for the following dynamic metadata:</p>
 <p><code class="docutils literal notranslate"><span class="pre">com.test.my_filter:</span> <span class="pre">{&quot;test_key&quot;:</span> <span class="pre">&quot;foo&quot;,</span> <span class="pre">&quot;test_object&quot;:</span> <span class="pre">{&quot;inner_key&quot;:</span> <span class="pre">&quot;bar&quot;}}</span></code></p>
 <ul class="simple">

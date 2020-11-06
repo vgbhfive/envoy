@@ -9,7 +9,7 @@ Memory
 admin.v2alpha.Memory
 --------------------
 
-`[admin.v2alpha.Memory proto] <https://github.com/envoyproxy/envoy/blob/b63bfabc9921cb7ee10e70d9de5c116538aeae40/api/envoy/admin/v2alpha/memory.proto#L17>`_
+`[admin.v2alpha.Memory proto] <https://github.com/envoyproxy/envoy/blob/2d161e665238d4b417286839a0225d5bc955c207/api/envoy/admin/v2alpha/memory.proto#L17>`_
 
 Proto representation of the internal memory consumption of an Envoy instance. These represent
 values extracted from an internal TCMalloc instance. For more information, see the section of the

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Well Known Dynamic Metadata &mdash; envoy 1.16.0-b63bfa documentation</title>
+  <title>Well Known Dynamic Metadata &mdash; envoy 1.16.0-2d161e documentation</title>
   
 
   
@@ -74,7 +74,7 @@
             
             
               <div class="version">
-                1.16.0-b63bfa
+                1.16.0-2d161e
               </div>
             
           
@@ -100,7 +100,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../about_docs.html">About the documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about_docs.html">关于文档</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../intro/intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../start/start.html">开始</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install/install.html">Building and installation</a></li>
@@ -201,8 +201,8 @@
   <div class="section" id="well-known-dynamic-metadata">
 <span id="id1"></span><h1>Well Known Dynamic Metadata<a class="headerlink" href="#well-known-dynamic-metadata" title="Permalink to this headline">¶</a></h1>
 <p>Filters can emit dynamic metadata via the <em>setDynamicMetadata</em> routine in the
-<a class="reference external" href="https://github.com/envoyproxy/envoy/blob/b63bfabc9921cb7ee10e70d9de5c116538aeae40/include/envoy/stream_info/stream_info.h">StreamInfo</a> interface on a
-<a class="reference external" href="https://github.com/envoyproxy/envoy/blob/b63bfabc9921cb7ee10e70d9de5c116538aeae40/include/envoy/network/connection.h">Connection</a>. This metadata emitted by a filter can be
+<a class="reference external" href="https://github.com/envoyproxy/envoy/blob/2d161e665238d4b417286839a0225d5bc955c207/include/envoy/stream_info/stream_info.h">StreamInfo</a> interface on a
+<a class="reference external" href="https://github.com/envoyproxy/envoy/blob/2d161e665238d4b417286839a0225d5bc955c207/include/envoy/network/connection.h">Connection</a>. This metadata emitted by a filter can be
 consumed by other filters and useful features can be built by stacking such filters. For example,
 a logging filter can consume dynamic metadata from an RBAC filter to log details about runtime
 shadow rule behavior. Another example is where an RBAC filter permits/restricts MySQL/MongoDB operations
