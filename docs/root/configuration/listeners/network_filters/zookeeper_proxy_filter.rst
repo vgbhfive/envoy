@@ -3,8 +3,7 @@
 ZooKeeper 代理
 ===============
 
-ZooKeeper 代理过滤器解码 `Apache ZooKeeper <https://zookeeper.apache.org/>`_ 的客户端协议。解码在负载中的请求、响应、事件。
-其中支持 `ZooKeeper 3.5 <https://github.com/apache/zookeeper/blob/master/zookeeper-server/src/main/java/org/apache/zookeeper/ZooDefs.java>`_  中已知的大多数操作码。不支持的那就是与 SALS 认证有关。
+ZooKeeper 代理过滤器解码 `Apache ZooKeeper <https://zookeeper.apache.org/>`_ 的客户端协议。解码在负载中的请求、响应、事件。其中支持 `ZooKeeper 3.5 <https://github.com/apache/zookeeper/blob/master/zookeeper-server/src/main/java/org/apache/zookeeper/ZooDefs.java>`_  中已知的大多数操作码。不支持的那就是与 SALS 认证有关。
 
 .. attention::
 
@@ -94,7 +93,7 @@ ZooKeeper 代理过滤器应该与 TCP 代理过滤器相连接，如下面的�
   setwatches_resp, Counter, setwatches 响应数
   checkwatches_resp, Counter, checkwatches 响应数
   removewatches_resp, Counter, removewatches 响应数
-  check_resp, Counter, 检查响应的数量
+  check_resp, Counter, 检查响应数
 
 
 .. _config_network_filters_zookeeper_proxy_latency_stats:
