@@ -3,7 +3,7 @@
 ZooKeeper 代理
 ===============
 
-ZooKeeper 代理过滤器解码 `Apache ZooKeeper <https://zookeeper.apache.org/>`_ 的客户端协议。解码在负载中的请求、响应、事件。其中支持 `ZooKeeper 3.5 <https://github.com/apache/zookeeper/blob/master/zookeeper-server/src/main/java/org/apache/zookeeper/ZooDefs.java>`_  中已知的大多数操作码。不支持的那就是与 SALS 认证有关。
+ZooKeeper 代理过滤器解码 `Apache ZooKeeper <https://zookeeper.apache.org/>`_ 的客户端协议。它能够对负载中的请求、响应、事件进行解码。其中支持 `ZooKeeper 3.5 <https://github.com/apache/zookeeper/blob/master/zookeeper-server/src/main/java/org/apache/zookeeper/ZooDefs.java>`_  中已知的大多数操作码。不支持的那就是与 SALS 认证有关。
 
 .. attention::
 
@@ -36,7 +36,7 @@ ZooKeeper 代理过滤器应该与 TCP 代理过滤器相连接，如下面的�
 统计
 ------
 
-每一个ZooKeeper 代理过滤器的配置都有一个基于 *<stat_prefix>.zookeeper.* 的统计信息。以下的计数器可用：
+每一个ZooKeeper 代理过滤器的配置都有一个基于 *<stat_prefix>.zookeeper.* 的统计信息。可用的计数器如下：
 
 .. csv-table::
   :header: 名称, 类型, 描述
