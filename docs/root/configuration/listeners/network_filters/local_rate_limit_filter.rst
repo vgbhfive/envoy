@@ -19,7 +19,7 @@
 .. note::
   在当前实现的每一个过滤器链中都有一个独立的限流过滤器。
 
-.. _config_network_filters_local_rate_limit_stats:s
+.. _config_network_filters_local_rate_limit_stats:
 
 统计
 ------
