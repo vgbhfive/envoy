@@ -5,7 +5,7 @@
 
 * 全局限流 :ref:`架构概述 <arch_overview_global_rate_limit>`
 * :ref:`v3 API 参考 <envoy_v3_api_msg_extensions.filters.network.ratelimit.v3.RateLimit>`
-* 过滤器应该被配置为 *envoy.filters.network.ratelimit* 的名称。
+* 过滤器应该以名称 *envoy.filters.network.ratelimit* 来配置。
 
 .. note::
   本地限流是通过 :ref:`本地限流过滤器 <config_network_filters_local_rate_limit>` 来支持的。
@@ -23,7 +23,7 @@
 
   total, Counter, 限流服务的请求总数
   error, Counter, 连接限流服务的总异常数
-  over_limit, Counter, 限流服务的超限相应总数
+  over_limit, Counter, 限流服务的超限响应总数
   ok, Counter, 限流服务的非超限服务总数
   cx_closed, Counter, 由于限流服务而超限的关闭连接总数
   active, Gauge, 限流服务的活跃请求总数
