@@ -13,8 +13,7 @@
 总述
 ------
 
-本地限流过滤器将 :ref:`令牌桶 <envoy_v3_api_field_extensions.filters.network.local_ratelimit.v3.LocalRateLimit.token_bucket>` 速率限制应用于由过滤器的过滤器链处理的传入连接。
-过滤器处理的每个连接都会使用一个令牌，如果连接中没有可用的令牌，那么连接将会被立刻关闭，而不需要进一步的迭代过滤器。
+本地限流过滤器将 :ref:`令牌桶 <envoy_v3_api_field_extensions.filters.network.local_ratelimit.v3.LocalRateLimit.token_bucket>` 速率限制应用于由过滤器的过滤器链处理的传入连接。过滤器处理的每个连接都会使用一个令牌，如果连接中没有可用的令牌，那么连接将会被立刻关闭，而不需要进一步的迭代过滤器。
 
 .. note::
   在当前实现中每一个过滤器和过滤器链中都有一个独立的限流。
