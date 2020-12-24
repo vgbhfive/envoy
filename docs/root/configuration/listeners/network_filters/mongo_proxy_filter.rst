@@ -3,7 +3,7 @@
 Mongo 代理
 ===========
 
-* MongoDB :ref:`架构概述 <arch_overview_mongo>`
+* MongoDB :ref:`架构概览 <arch_overview_mongo>`
 * :ref:`v3 API 参考 <envoy_v3_api_msg_extensions.filters.network.mongo_proxy.v3.MongoProxy>`
 * 过滤器的名称应该被配置为 *envoy.filters.network.mongo_proxy* 。
 
@@ -19,7 +19,7 @@ Mongo 代理过滤器支持故障注入。通过查看 v3 API 参考如何配置
 统计
 ----------
 
-每个配置的 MongoDB 代理过滤器都有一个基于 *mongo.<stat_prefix>.* 如下所示的统计信息：
+每个配置的 MongoDB 代理过滤器都有以 *mongo.<stat_prefix>.* 为根，且有如下所示的统计信息：
 
 .. csv-table::
   :header: 名称, 类型, 描述
@@ -169,5 +169,5 @@ upstream_host
   :header: 名称, 类型, 描述
   :widths: 1, 1, 2
 
-  key, string, *db.collection* 格式资源名称.
+  key, string, *db.collection* 格式资源名称。
   value, array, 表示在资源上执行操作的字符串列表（插入/更新/查询/删除）。
