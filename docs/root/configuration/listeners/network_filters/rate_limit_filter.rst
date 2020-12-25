@@ -3,9 +3,9 @@
 限流
 ==========
 
-* 全局限流 :ref:`架构概述 <arch_overview_global_rate_limit>`
+* 全局限流 :ref:`架构概览 <arch_overview_global_rate_limit>`
 * :ref:`v3 API 参考 <envoy_v3_api_msg_extensions.filters.network.ratelimit.v3.RateLimit>`
-* 过滤器应该以名称 *envoy.filters.network.ratelimit* 来配置。
+* 过滤器的名称应该配置为 *envoy.filters.network.ratelimit* 。
 
 .. note::
   本地限流是通过 :ref:`本地限流过滤器 <config_network_filters_local_rate_limit>` 来支持的。
@@ -15,7 +15,7 @@
 统计
 ----------
 
-每个限流过滤器的配置都有一个基于 *ratelimit.<stat_prefix>.* 如下所示的统计信息：
+每个限流过滤器的配置都有以 *ratelimit.<stat_prefix>.* 为根的统计信息，如下所示：
 
 .. csv-table::
   :header: 名称, 类型, 描述
@@ -35,7 +35,7 @@
 网络限流过滤器支持以下的运行时设置：
 
 ratelimit.tcp_filter_enabled
-  连接数的百分比会调用限速服务。默认为 100。
+  调用限流服务的连接百分比。默认为 100。
 
 ratelimit.tcp_filter_enforcing
-  连接数的百分比会调用限速服务并强制执行，默认为 100。这个可以被用于测试在强制执行之前会发生什么。
+  调用限流服务并强制执行的连接百分比，默认为 100。这个可以被用于测试在强制执行之前会发生什么。
