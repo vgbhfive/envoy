@@ -25,7 +25,7 @@ Redis 代理
   downstream_cx_total, Counter, 总连接数
   downstream_cx_tx_bytes_buffered, Gauge, 当前缓冲中发送的字节
   downstream_cx_tx_bytes_total, Counter, 发送的字节数
-  downstream_cx_drain_close, Counter, 由于耗尽而关闭的连接数
+  downstream_cx_drain_close, Counter, 由于排空而关闭的连接数
   downstream_rq_active, Gauge, 活跃的请求数
   downstream_rq_total, Counter, 请求数
 
@@ -73,7 +73,7 @@ redis.drain_close_enabled
 故障注入
 ---------------
 
-Redis 过滤器可以执行故障注入。当然，延迟和异常故障都是支持的。延迟故障延迟请求，异常故障响应异常。此外，异常也可以延迟。
+Redis 过滤器可以执行故障注入。当前，延迟和异常故障都是支持的。延迟故障延迟请求，异常故障以异常响应。此外，异常也可以延迟。
 
 注意，Redis 过滤器不会检查配置的正确性，因为这是用户负责确保默认值和运行时百分比都是正确的。这是因为百分比可以在运行时被修改，同时在请求时验证正确性是非常昂贵的。
 如果指定了多个故障，对于默认的故障和 Redis 命令组合注入故障百分比之和不会超过 100%。例如，如果指定了两个故障，一个应用于 60% 的 GET 请求，另一个应用于所有命令的 50%，这显然是一个错误的配置，因为 GET 请求有 110% 的机会应用错误。
