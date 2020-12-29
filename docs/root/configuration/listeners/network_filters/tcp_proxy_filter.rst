@@ -12,16 +12,16 @@ TCP 代理
 动态集群选择
 -------------------------
 
-TCP 代理过滤器使用的上游集群可以由其他网络过滤器根据每个连接动态设置，方法是在键 `envoy.tcp_proxy.cluster` 下设置每个连接的状态对象。见实现详情。
+TCP 代理过滤器使用的上游集群可以由其他网络过滤器根据每个连接动态设置，方法是在 `envoy.tcp_proxy.cluster` 字段下设置每个连接的状态对象。见实现详情。
 
 .. _config_network_filters_tcp_proxy_subset_lb:
 
 路由到主机子集
 ----------------------------
 
-TCP 代理可以被配置路由到上游集群内部的主机子集。
+可以配置 TCP 代理，让它路由到上游集群内部的主机子集。
 
-为了定义合适的上游主机必须匹配的元数据，使用以下字段：
+为了定义合适的上游主机必须匹配的元数据，请使用以下字段之一：
 
 #. 使用 :ref:`TcpProxy.metadata_match<envoy_v3_api_field_extensions.filters.network.tcp_proxy.v3.TcpProxy.metadata_match>` 为单个上游集群定义所需的元数据。
 #. 使用 :ref:`ClusterWeight.metadata_match<envoy_v3_api_field_extensions.filters.network.tcp_proxy.v3.TcpProxy.WeightedCluster.ClusterWeight.metadata_match>` 为权重集群定义所需的元数据。
@@ -34,7 +34,7 @@ TCP 代理可以被配置路由到上游集群内部的主机子集。
 统计信息
 ----------
 
-TCP 代理过滤器同时发出它自己的下游统计信息和许多如果可用的 :ref:`上游集群统计信息 <config_cluster_manager_cluster_stats>` 。下游统计信息以 *tcp.<stat_prefix>.* 为根，如下所示的统计信息：
+TCP 代理过滤器即会发出自己的下游统计信息，也会在适用的情况下发出许多 :ref:`上游集群统计信息 <config_cluster_manager_cluster_stats>` 。下游统计信息以 *tcp.<stat_prefix>.* 为根，如下所示的统计信息：
 
 .. csv-table::
   :header: 名称, 类型, 描述
