@@ -10,7 +10,7 @@
 外部授权网络过滤器调用外部授权服务去检查传入请求是否被授权。如果请求被网络过滤器视为未经授权那么连接将会被关闭。
 
 .. tip::
-  建议在过滤器链中首先配置此过滤器，以便请求可以在其他过滤器处理请求之前对其进行授权。
+  建议在过滤器链中首先配置此过滤器，以便可以在其他过滤器处理请求之前授权请求。
 
 传递到授权服务的请求内容由 :ref:`CheckRequest <envoy_v3_api_msg_service.auth.v3.CheckRequest>` 来决定。
 
@@ -62,7 +62,7 @@
   error, Counter, 连接外部服务的异常总数
   denied, Counter, 来自授权服务的拒绝的响应总数
   disabled, Counter, 由于过滤器未启用而未调用外部服务的通过请求总数
-  failure_mode_allowed, Counter, 由于 failure_mode_allow 设置未 true 而允许的请求异常总数
+  failure_mode_allowed, Counter, 由于 failure_mode_allow 设置为 true 而允许的请求异常总数
   ok, Counter, 来自授权服务的允许通过的响应总数
   cx_closed, Counter, 关闭的连接总数
   active, Gauge, 当前传输到授权服务的活跃请求总数
@@ -71,4 +71,4 @@
 ----------------
 .. _config_network_filters_ext_authz_dynamic_metadata:
 
-外部授权过滤器仅在 gRPC 授权服务返回一个 :ref:`检查响应 <envoy_v3_api_msg_service.auth.v3.CheckResponse>` 并包含 :ref:`dynamic_metadata <envoy_v3_api_field_service.auth.v3.CheckResponse.dynamic_metadata>` 字段时才会将动态元数据作为一个不透明的 ``google.protobuf.Struct`` 。
+只有当 gRPC 授权服务返回一个包含 :ref:`检查响应 <envoy_v3_api_msg_service.auth.v3.CheckResponse>` 字段的 :ref:`dynamic_metadata <envoy_v3_api_field_service.auth.v3.CheckResponse.dynamic_metadata>` 时，外部授权过滤器才会将动态元数据以不透明的 ``google.protobuf.Struct`` 的形式发出。
