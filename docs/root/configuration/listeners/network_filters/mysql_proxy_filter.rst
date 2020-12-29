@@ -3,7 +3,7 @@
 MySQL 代理
 ===========
 
-MySQL 代理过滤器解码 MySQL 客户端与服务端之间的有线协议。它解码负载中的 SQL 查询（仅 SQL99 格式）。解码信息会作为动态元数据而发出，它会与访问日志过滤器相结合去获取所访问表的详细信息以及对每个表执行的操作。
+MySQL 代理过滤器解码 MySQL 客户端与服务端之间的有线协议。它解码负载中的 SQL 查询（仅 SQL99 格式）。解码后的信息以动态元数据的形式发出，可以与访问日志过滤器相结合，以获得所访问表的详细信息，以及对每个表执行的操作。
 
 .. attention::
 
@@ -46,7 +46,7 @@ MySQL 代理过滤器应该与 TCP 代理过滤器链接，如下配置片段所
   :header: 名称, 类型, 描述
   :widths: 1, 1, 2
 
-  auth_switch_request, Counter, 上游服务器请求客户端更换其他验签方法的次数
+  auth_switch_request, Counter, 上游服务器请求客户端更换其他认证方法的次数
   decoder_errors, Counter, MySQL 协议解码异常数
   login_attempts, Counter, 登陆尝试次数
   login_failures, Counter, 登录失败次数
@@ -61,7 +61,7 @@ MySQL 代理过滤器应该与 TCP 代理过滤器链接，如下配置片段所
 动态元数据
 ----------------
 
-MySQL 过滤器为解析每个 SQL 查询发出以下动态元数据：
+MySQL 过滤器为每个解析的 SQL 查询发出以下动态元数据：
 
 .. csv-table::
   :header: 名称, 类型, 描述
@@ -72,10 +72,10 @@ MySQL 过滤器为解析每个 SQL 查询发出以下动态元数据：
 
 .. _config_network_filters_mysql_proxy_rbac:
 
-在表上实施 RBAC 访问
+对表实施 RBAC 访问
 ----------------------------------
 
-MySQL 过滤器发出的动态元数据可以与 RBAC 过滤器一起使用，用于控制对数据库的各个表的访问。
+MySQL 过滤器发出的动态元数据可以与 RBAC 过滤器一起使用，用于控制对数据库的单个表的访问。
 下面的配置片段展示了一个 RBAC 过滤器配置的示例，该配置拒绝在 _productdb_ 数据库中的 _catalog_ 表上使用 _update_ 语句的 SQL 查询。
 
 .. code-block:: yaml
