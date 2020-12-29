@@ -5,7 +5,7 @@ Mongo 代理
 
 * MongoDB :ref:`架构概览 <arch_overview_mongo>`
 * :ref:`v3 API 参考 <envoy_v3_api_msg_extensions.filters.network.mongo_proxy.v3.MongoProxy>`
-* 过滤器的名称应该被配置为 *envoy.filters.network.mongo_proxy* 。
+* 过滤器的名称应该配置为 *envoy.filters.network.mongo_proxy* 。
 
 .. _config_network_filters_mongo_proxy_fault_injection:
 
@@ -53,7 +53,7 @@ Mongo 代理过滤器支持故障注入。通过查看 v3 API 参考如何配置
 Envoy 将 *scatter get* 定义为不使用 *_id* 字段作为查询参数的任何查询。
 Envoy 在最高级文档和 *$query* 字段中查找 *_id* 。
 
-多重获取
+批量获取
 ^^^^^^^^^^
 
 Envoy 将 *multi get* 定义为使用 *_id* 字段作为查询参数的任何查询，但其中 *_id* 不是标量（scalar）值（例如文档或数组）。Envoy 在最高级文档和 *$query* 字段中查找 *_id* 。
@@ -63,7 +63,7 @@ Envoy 将 *multi get* 定义为使用 *_id* 字段作为查询参数的任何查
 $comment 解析
 ^^^^^^^^^^^^^^^^
 
-如果一个请求中包含一个高级别的 *$comment* 字段（通常除了 *$query* 字段），Envoy 将会把他解析为 JSON 并如下结构所示：
+如果一个请求中包含一个顶级的 *$comment* 字段（通常除了 *$query* 字段），Envoy 将会把他解析为 JSON 并如下结构所示：
 
 .. code-block:: json
 
