@@ -7,7 +7,7 @@
 * 过滤器的名称应该配置为 *envoy.filters.http.ext_authz* 。
 
 外部授权服务通过调用外部 gRPC 或者 HTTP 服务来检查传入的 HTTP 请求是否被授权。
-如果请求是未被授权的，那么请求通常会被 403 （禁止）响应拒绝。
+如果该请求被视为未授权，则通常会以 403 （禁止）响应拒绝该请求。
 注意，从授权服务向上游、下游或者授权服务发送其他自定义元数据也是被允许的。在 :ref:`HTTP 过滤器 <envoy_v3_api_msg_extensions.filters.http.ext_authz.v3.ExtAuthz>` 中有更多详细的解释。
 
 传递给授权服务的请求内容由 :ref:`CheckRequest <envoy_v3_api_msg_service.auth.v3.CheckRequest>` 指定。
@@ -57,7 +57,7 @@ gRPC 授权服务器的过滤器配置示例：
 
 .. note::
 
-  这个过滤器的一个特性就是将 HTTP 请求体作为 :ref:`check request <envoy_v3_api_msg_service.auth.v3.CheckRequest>` 的一部分发送到配置的 gRPC 授权服务器。
+  这个过滤器的一个特性就是将 HTTP 请求体作为 :ref:`检查请求 <envoy_v3_api_msg_service.auth.v3.CheckRequest>` 的一部分发送到配置的 gRPC 授权服务器。
 
   简单配置如下：
 
@@ -112,7 +112,7 @@ gRPC 授权服务器的过滤器配置示例：
                   address: 127.0.0.1
                   port_value: 10003
 
-路由配置
+按路由独立配置
 -----------------------
 
 虚拟主机和路由过滤器的简单配置示例。
@@ -170,4 +170,4 @@ HTTP 过滤器输出 *cluster.<route target cluster>.ext_authz.* 命名空间中
 
 运行时
 -------
-可以通过 :ref:`filter_enabled <envoy_v3_api_field_extensions.filters.http.ext_authz.v3.ExtAuthz.filter_enabled>` 字段的 :ref:`runtime_key <envoy_v3_api_field_config.core.v3.RuntimeFractionalPercent.runtime_key>` 值来配置启用过滤器的请求部分。
+可以通过 :ref:`filter_enabled <envoy_v3_api_field_extensions.filters.http.ext_authz.v3.ExtAuthz.filter_enabled>` 字段的 :ref:`runtime_key <envoy_v3_api_field_config.core.v3.RuntimeFractionalPercent.runtime_key>` 值来配置启用过滤器的请求百分比。
