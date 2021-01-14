@@ -76,7 +76,7 @@ gRPC 授权服务器的过滤器配置示例：
             pack_as_bytes: true
 
   注意，默认情况下，:ref:`check request<envoy_v3_api_msg_service.auth.v3.CheckRequest>` 以 UTF-8 字符串的形式携带 HTTP 请求体，并同时填充 :ref:`body <envoy_v3_api_field_service.auth.v3.AttributeContext.HttpRequest.body>` 字段。
-  如果需要将请求体打包为原始字节，则需要将 :ref:`pack_as_bytes <envoy_v3_api_field_extensions.filters.http.ext_authz.v3.BufferSettings.pack_as_bytes>` 设置为 true 。
+  如果需要将请求体打包为原始字节，则需要将 :ref:`pack_as_bytes <envoy_v3_api_field_extensions.filters.http.ext_authz.v3.BufferSettings.pack_as_bytes>` 设置为 true。
   事实上，:ref:`raw_body <envoy_v3_api_field_service.auth.v3.AttributeContext.HttpRequest.raw_body>` 字段会被赋值，而 :ref:`body <envoy_v3_api_field_service.auth.v3.AttributeContext.HttpRequest.body>` 会被设为空。
 
 原始 HTTP 授权服务器的过滤器配置示例：
@@ -145,18 +145,18 @@ gRPC 授权服务器的过滤器配置示例：
 ----------
 .. _config_http_filters_ext_authz_stats:
 
-HTTP 过滤器输出 *cluster.<route target cluster>.ext_authz.* 命名空间中的统计信息。
+HTTP 过滤器输出的统计信息 *cluster.<route target cluster>.ext_authz.* 命名空间中。
 
 .. csv-table::
   :header: 名称, 类型, 描述
   :widths: 1, 1, 2
 
-  ok, Counter, 过滤器的响应总数
-  error, Counter, 联系外部服务（包含超时）的异常总数
-  timeout, Counter, 联系外部服务的超时总数（仅计算在创建请求时判定为超时）
-  denied, Counter, 授权服务的拒绝通信的响应总数
-  disabled, Counter, 由于过滤器被禁用，不调用外部服务而允许的请求总数
-  failure_mode_allowed, Counter, 出现异常但由于 failure_mode_allow 被设置为 true 而允许通过的请求总数
+  ok, Counter, 过滤器的响应总数。
+  error, Counter, 联系外部服务（包含超时）的异常总数。
+  timeout, Counter, 联系外部服务的超时总数（仅计算在创建请求时判定为超时）。
+  denied, Counter, 授权服务的拒绝通信的响应总数。
+  disabled, Counter, 由于过滤器被禁用，不调用外部服务而允许的请求总数。
+  failure_mode_allowed, Counter, 出现异常但由于 failure_mode_allow 被设置为 true 而允许通过的请求总数。
 
 动态元数据
 ----------------
