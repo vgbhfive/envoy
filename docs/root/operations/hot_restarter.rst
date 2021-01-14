@@ -3,7 +3,7 @@
 热重启 Python 封装器
 ==========================
 
-通常情况下，在配置修改或二进制升级后，Envoy 将会 :ref:`热重启 <arch_overview_hot_restart>` 。然而，在许多情况下，用户希望通过标准的流程管理器，例如 monit、runit 等。所以我们提供 :repo:`/restarter/hot-restarter.py` 来简化这个流程。
+通常情况下，在配置修改或代码变更后，Envoy 将会 :ref:`热重启 <arch_overview_hot_restart>` 。然而在许多情况下用户希望通过标准的流程管理器进行管理（例如 monit、runit）。所以我们提供 :repo:`/restarter/hot-restarter.py` 来简化这个流程。
 
 重启的调用方式如下：
 
@@ -11,7 +11,7 @@
 
   hot-restarter.py start_envoy.sh
 
-`start_envoy.sh` 可以被这样定义，例如（使用 salt/jinja 语法）：
+`start_envoy.sh` 可以按如下方法定义（类似 salt/jinja 语法）：
 
 .. code-block:: jinja
 
@@ -22,15 +22,15 @@
 
   exec /usr/sbin/envoy -c /etc/envoy/envoy.cfg --restart-epoch $RESTART_EPOCH --service-cluster {{ grains['cluster_name'] }} --service-node {{ grains['service_node'] }} --service-zone {{ grains.get('ec2_availability-zone', 'unknown') }}
 
-`inotify.max_user_watches` 注意：如果 Envoy 被配置用于监视 Linux 机器目录中的许多文件，请增加此值，因为 Linux 强制限制可以监视的最大文件数。
+留意 `inotify.max_user_watches`：当 Envoy 被配置用于监视 Linux 机器目录中的多个文件时，请增加此值，因为 Linux 强制限制了最大可监视的文件数。
 
-*RESTART_EPOCH* 环境变量由重启程序在每次重启的时候设置，并且必须传递给 :option:`--restart-epoch` 选项。
+*RESTART_EPOCH* 环境变量由重启程序在每次重启的时候设置，并且必须通过 :option:`--restart-epoch` 选项完成传递。
 
 .. warning::
 
    如果使用 :option:`--use-dynamic-base-id` 选项要特别小心。只有当 *RESTART_EPOCH* 是 0，
-   并且你的 *start_envoy.sh* 必须获得所选的基本 ID（例如 :option:`--base-id-path` ），并存储它，
-   然后在后续的调用中作为 :option:`--base-id` 的值（当 *RESTART_EPOCH* 大于 0 时），这样才能设置该标志。
+   并且你的 *start_envoy.sh* 必须获得所选的基本 ID（例如 :option:`--base-id-path` ）并存储，
+   然后在后续的调用中作为 :option:`--base-id` 的值（当 *RESTART_EPOCH* 大于 0 时），才能设置该标志。
 
 
 重启程序处理以下信号：
