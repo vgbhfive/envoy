@@ -3,10 +3,10 @@
 为什么找不到我的路由？
 ==========================
 
-一旦你深入了解 Envoy 响应并且发现 Envoy 生成带有 "Sending local reply with details route_not_found" 消息的本地响应，那么下一个问题会是 _why_ ？
+一旦你深入了解 Envoy 响应并且发现 Envoy 生成带有 "Sending local reply with details route_not_found" 消息的本地响应，那么下一个问题会为什么？
 
 通常你可以查看你的路由配置和发送的头信息，并看到缺失的内容。
-一个经常被忽略的问题就是 host:port 匹配。如果你的路由配置匹配到 www.host.com 主机但是客户端发送请求到 ww.host.com:443 ，这并不会被匹配到。 
+一个经常被忽略的问题就是 host:port 匹配。如果你的路由配置匹配到 www.host.com 域名，但是客户端发送请求到 ww.host.com:443 ，这并不会被匹配到。 
 
 如果你遇到这样的问题，可以使用两种之一的方式解决。
 第一个就是修改你的配置信息去匹配 host:port 对，从
