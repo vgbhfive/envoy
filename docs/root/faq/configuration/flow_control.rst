@@ -1,10 +1,10 @@
 .. _faq_flow_control:
 
-我该如何配置流量控制？
+如何配置流量控制？
 ================================
 
 当 Envoy 使用非流式传输的 L7 过滤器时，流量控制可能会导致许多问题，尤其是请求体或者响应体会超过 L7 缓存区限制。
-对于体必须缓存并且超出配置限制的请求，Envoy 会给用户返回 413 并且增加 :ref:`downstream_rq_too_large <config_http_conn_man_stats>` 指标。
+对于请求体必须缓存并且超出配置限制的，Envoy 会给用户返回 413 并且增加 :ref:`downstream_rq_too_large <config_http_conn_man_stats>` 指标。
 在响应路径中如果响应体必须缓存并超过限制，Envoy 会增加 :ref:`rs_too_large <config_http_conn_man_stats>` 指标并且断开中间响应（如果头已经发送到下游）然后发送 500 响应。
 
 配置 Envoy 流量控制会有三个限制：
