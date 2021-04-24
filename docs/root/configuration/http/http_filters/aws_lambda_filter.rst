@@ -13,7 +13,8 @@ AWS Lambda
 
 HTTP AWS Lambda 过滤器用于从标准 HTTP/1.x 或 HTTP/2 请求中触发 AWS Lambda 函数。
 
-如果 :ref:`payload_passthrough <envoy_v3_api_field_extensions.filters.http.aws_lambda.v3.Config.payload_passthrough>` 被设置为 ``true``，然后将负载发送到 Lambda，而不进行任何转换。
+如果 :ref:`payload_passthrough <envoy_v3_api_field_extensions.filters.http.aws_lambda.v3.Config.payload_passthrough>` 被设置为 ``true``，然后负载将会被发送到 Lambda 函数，而不进行任何转换。
+*注意*: 这意味着你将无法访问 Lambda 函数中所有的 HTTP 头。
 
 但如果 :ref:`payload_passthrough <envoy_v3_api_field_extensions.filters.http.aws_lambda.v3.Config.payload_passthrough>` 被设置为 ``false``，HTTP 请求被转换为具有以下模式的 JSON 负载：
 
